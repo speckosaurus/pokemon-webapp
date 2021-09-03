@@ -1,0 +1,20 @@
+.PokemonList {
+  background-color: #282c34;
+  height: 500px;
+  width: 50%;
+  overflow: hidden;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Pokemon:hover {
+  background-color: rgb(98, 0, 255);
+  cursor: pointer;
+}
+
+ol {
+  margin: 0 0 0 30px;
+}

@@ -1,0 +1,236 @@
+.PokemonData {
+  background-color: #ffffff;
+  height: 500px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(0, 0, 0);
+}
+
+.img-container {
+  float: left;
+  padding: 5px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.fire {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(226, 215, 215);
+  background-color: red;
+}
+
+.water {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: blue;
+}
+
+.grass {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: green;
+}
+
+.flying {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  color: rgb(226, 215, 215);
+  background-color: skyblue;
+}
+
+.bug {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: lightgreen;
+}
+
+.psychic {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: purple;
+}
+
+.fighting {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: brown;
+}
+
+.rock {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: grey;
+}
+
+.ground {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: orange;
+}
+
+.fairy {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: pink;
+}
+
+.normal {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: lightgrey;
+}
+
+.electric {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: yellow;
+}
+
+.dark {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: darkslategrey;
+}
+
+.steel {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: lightslategrey;
+}
+
+.dragon {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: indigo;
+}
+
+.poison {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: darkviolet;
+}
+
+.ghost {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: whitesmoke;
+}
+
+.ice {
+  border-radius: 10px;
+  float: left;
+  padding: 5px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(8px + 2vmin);
+  color: rgb(226, 215, 215);
+  background-color: lightblue;
+}
