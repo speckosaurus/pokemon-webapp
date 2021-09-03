@@ -55,14 +55,14 @@ export default function PokemonDisplay(props) {
     return (
         <div className="PokemonDisplay">
             <div className="row">
-              <p>{pokemonDisplay.name}</p>
+              <p className="row-item">{pokemonDisplay.name}</p>
               <p className="row-item" hidden={!props.isBaby}> (baby)</p>
               <p className="row-item" hidden={!props.isLegendary}> (legendary)</p>
               <p className="row-item" hidden={!props.isMythical}> (mythical)</p>
             </div>
             <div className="row">
                 <img src={pokemonDisplay.sprite} key="Pokemon-sprite" className="row-item" alt={pokemonDisplay.name + '-sprite'} />
-                <img src={pokemonDisplay.shiny} key="Pokemon-shiny" className="row-item" alt={pokemonDisplay.name + 'shiny-sprite'} />
+                <img hidden={pokemonDisplay.shiny === null} src={pokemonDisplay.shiny} key="Pokemon-shiny" className="row-item" alt={pokemonDisplay.name + '-shiny-sprite'} />
             </div>
             <div className="row">{pokemonDisplay.types.map((type) => 
                 <div className={type.name} key={type.name}>{type.name}</div>
