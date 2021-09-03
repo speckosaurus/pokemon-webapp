@@ -1,0 +1,21 @@
+.SpeciesInfo {
+  background-color: #282c34;
+  height: 500px;
+  width: 50%;
+  overflow: hidden;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.row-item {
+  float: left;
+  padding: 5px;
+}
+
+.row::after {
+  clear: both;
+  display: table;
+}

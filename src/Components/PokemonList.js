@@ -2,6 +2,7 @@ import './PokemonList.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
+import { FormatPokemonName, FilterPokemonForms } from '../Utils/Utils';
 
 export default function PokemonList(props) {
     function selectPokemon(url) {
@@ -23,16 +24,12 @@ export default function PokemonList(props) {
         let newPokemon = res.data.results.map(p => p);
 
         // Remove Mega, GMax and regional forms
-        newPokemon = newPokemon.filter(p =>
-            !p.name.includes('-mega') &&
-            !p.name.includes('-gmax') &&
-            !p.name.includes('-alola') &&
-            !p.name.includes('-galar') &&
-            !p.name.includes('-totem') &&
-            !p.name.includes('-crowned')
-        );
+        //newPokemon = FilterPokemonForms(newPokemon);
 
-        // Format Pokemon name
+        // Format Pokemon names
+        newPokemon.forEach(function (item) {
+          item = FormatPokemonName(item);
+        });
 
         setAllPokemon([...allPokemon, ...newPokemon]);
       
@@ -46,7 +43,9 @@ export default function PokemonList(props) {
       return () => cancel();
     }, [currentUrl]);
 
-    if (loading) return <Loading />;
+    if (loading) return <div className="PokemonList">
+      <Loading />
+    </div>;
 
     return (
         <div className="PokemonList">
@@ -58,7 +57,7 @@ export default function PokemonList(props) {
                     {pokemon.name}
                 </li>
             )}
-            </ol>
+          </ol>
         </div>
     )
 }
