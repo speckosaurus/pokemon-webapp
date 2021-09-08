@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import './SpeciesInfo.css';
+import './Shared.css';
+import { FormatVersionName } from '../Utils/Utils';
 
 export default function SpeciesInfo(props) {
 
@@ -24,8 +26,23 @@ export default function SpeciesInfo(props) {
           species.flavor_text_entries.forEach(function (item) {
 
             if (item.language.name === "en") {
-              let entry = {text: item.flavor_text.replace("\f", "\n"), version: item.version.name};
-              speciesInfo.dexEntries.push(entry);
+              let dupDexEntry = false;
+              let entryText = item.flavor_text
+                .replace('\f', ' ')
+                .replace(/\n/g,' ');
+              let entryVersion = item.version.name;
+
+              speciesInfo.dexEntries.forEach(function (dexEntry) {
+                if (dexEntry.text === entryText) {
+                  dupDexEntry = true;
+                  dexEntry.versions.push(entryVersion);
+                }
+              });
+              
+              if (!dupDexEntry) {
+                let entry = {text: entryText, versions: [entryVersion]};
+                speciesInfo.dexEntries.push(entry);
+              }
             }
           });
 
@@ -40,12 +57,25 @@ export default function SpeciesInfo(props) {
     }
 
     return (
-        <ol className="SpeciesInfo">
+        <div className="SpeciesInfo">
+          <h1>Pokedex Entries</h1>
+          <hr />
               {speciesInfo.dexEntries.map((dexEntry, index) => 
-                  <li key={index} className="DexEntry">
-                      {dexEntry.text}
-                  </li>
+                  <div key={index} className="DexEntry">
+                    <div className="row">{dexEntry.versions.map((version) => 
+                      <div>
+                        <div className="space"></div>
+                        <div className={version} key={version}>{FormatVersionName(version)}</div>
+                      </div>
+                    )}</div>
+                    <br />
+                    <div className="row">
+                      <div className="space"></div>
+                      <p>{dexEntry.text}</p>
+                    </div>
+                    <hr />
+                  </div>
               )}
-        </ol>
+        </div>
     )
 }

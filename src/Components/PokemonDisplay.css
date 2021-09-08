@@ -9,22 +9,12 @@
   color: rgb(0, 0, 0);
 }
 
-.row-item {
-  float: left;
-  padding: 5px;
-}
-
 .Egg {
   float: left;
   padding: 5px;
   height: 20px;
   width: 20px;
   justify-content: center;
-}
-
-.row::after {
-  clear: both;
-  display: table;
 }
 
 .Fire {
@@ -34,6 +24,7 @@
   width: 100px;
   align-items: center;
   justify-content: center;
+  font-size: calc(8px + 2vmin);
   color: rgb(255, 255, 255);
   background-color: red;
 }
@@ -69,6 +60,7 @@
   width: 100px;
   align-items: center;
   justify-content: center;
+  font-size: calc(8px + 2vmin);
   color: rgb(255, 255, 255);
   background-color: skyblue;
 }

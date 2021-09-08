@@ -1,4 +1,5 @@
 import './PokemonDisplay.css';
+import './Shared.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
@@ -65,7 +66,7 @@ export default function PokemonDisplay(props) {
                 <img hidden={pokemonDisplay.shiny === null} src={pokemonDisplay.shiny} key="Pokemon-shiny" className="row-item" alt={pokemonDisplay.name + '-shiny-sprite'} />
             </div>
             <div className="row">{pokemonDisplay.types.map((type) => 
-                <div className={type.name} key={type.name}>{type.name}</div>
+              <div className={type.name} key={type.name}>{type.name}</div>
             )}</div>
         </div>
     );

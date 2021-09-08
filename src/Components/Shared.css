@@ -1,0 +1,16 @@
+.row-item {
+  float: left;
+  padding: 5px;
+}
+
+.row::after {
+  clear: both;
+  display: table;
+}
+
+.space {
+  border-radius: 5px;
+  float: left;
+  padding: 5px;
+  width: 5px;
+}

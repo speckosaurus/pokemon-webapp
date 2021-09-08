@@ -2,7 +2,7 @@ import './PokemonList.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
-import { FormatPokemonName, FilterPokemonForms } from '../Utils/Utils';
+import { FormatPokemonName } from '../Utils/Utils';
 
 export default function PokemonList(props) {
     function selectPokemon(url) {
@@ -23,10 +23,6 @@ export default function PokemonList(props) {
       }).then(res => {
         let newPokemon = res.data.results.map(p => p);
 
-        // Remove Mega, GMax and regional forms
-        //newPokemon = FilterPokemonForms(newPokemon);
-
-        // Format Pokemon names
         newPokemon.forEach(function (item) {
           item = FormatPokemonName(item);
         });
