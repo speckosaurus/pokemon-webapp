@@ -1,0 +1,18 @@
+.SearchBar {
+  background-color: #282c34;
+  width: auto;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(20px + 2vmin);
+  color: white;
+}
+
+.input {
+  padding: 2px;
+  width: auto;
+  font-size: 20px;
+  color: #000000;
+}
+.input:focus {
+  outline: none;
+}
