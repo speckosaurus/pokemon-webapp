@@ -1,5 +1,5 @@
 import './App.css';
-import PokemonList from '../Components/PokemonList';
+import Navigation from '../Components/Navigation';
 import PokemonDisplay from '../Components/PokemonDisplay';
 import SpeciesInfo from '../Components/SpeciesInfo';
 import Header from '../Components/Header';
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Header />
       <div className="Pokedex">
-        <PokemonList setSelectedPokemon={setSelectedPokemon}/>
+        <Navigation setSelectedPokemon={setSelectedPokemon}/>
         <PokemonDisplay
           selectedPokemon={selectedPokemon}
           setSpeciesUrl={setSpeciesUrl}

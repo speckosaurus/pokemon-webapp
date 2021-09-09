@@ -1,10 +1,5 @@
 .SearchBar {
-  background-color: #282c34;
-  width: auto;
-  align-items: left;
-  justify-content: left;
-  font-size: calc(20px + 2vmin);
-  color: white;
+  height: 10%;
 }
 
 .input {

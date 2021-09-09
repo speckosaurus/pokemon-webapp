@@ -2,7 +2,6 @@ import './PokemonList.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
-import SearchBar from './SearchBar';
 import { FormatPokemonName } from '../Utils/Utils';
 
 export default function PokemonList(props) {
@@ -14,7 +13,6 @@ export default function PokemonList(props) {
     const [pokemonList, setPokemonList] = useState([]);
     const [currentUrl, setCurrentUrl] = useState('https://pokeapi.co/api/v2/pokemon/');
     const [loading, setLoading] = useState(true);
-    const [searchTerm, setSearchTerm] = useState(null);
     
     // Every time currentUrl changes
     // Re-run code inside useEffect to get next page of Pokemon
@@ -44,16 +42,16 @@ export default function PokemonList(props) {
     }, [currentUrl]);
 
     useEffect(() => {
-        if (searchTerm) {
+        if (props.searchTerm) {
             const filteredList = allPokemon.filter(pokemon => {
-                return pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
+                return pokemon.name.toLowerCase().includes(props.searchTerm.toLowerCase())
             });
 
             setPokemonList(filteredList);
         } else {
             setPokemonList(allPokemon);
         }
-    }, [searchTerm]);
+    }, [props.searchTerm]);
 
     if (loading) return <div className="PokemonList">
       <Loading />
@@ -61,7 +59,6 @@ export default function PokemonList(props) {
 
     return (
         <div className="PokemonList">
-          <SearchBar setSearchTerm={setSearchTerm} />
           <p className="row-item" hidden={pokemonList.length > 0}>No Pokemon found</p>
           <ol>
             {pokemonList.map((pokemon) => 

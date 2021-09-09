@@ -1,7 +1,20 @@
 .SpeciesInfo {
   background-color: #282c34;
-  height: 500px;
-  width: 50%;
+  height: 550px;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 2vmin);
+  color: white;
+}
+
+.Title {
+  height: 10%;
+}
+
+.DexEntries {
+  background-color: #282c34;
+  height: 90%;
   overflow: hidden;
   overflow-y: scroll;
   align-items: center;

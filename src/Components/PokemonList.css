@@ -1,7 +1,6 @@
 .PokemonList {
   background-color: #282c34;
-  height: 500px;
-  width: 50%;
+  height: 90%;
   overflow: hidden;
   overflow-y: scroll;
   align-items: center;
@@ -16,5 +15,5 @@
 }
 
 ol {
-  margin: 0 0 0 30px;
+  margin: 0 0 0 50px;
 }

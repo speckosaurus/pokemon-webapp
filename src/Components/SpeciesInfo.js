@@ -24,7 +24,6 @@ export default function SpeciesInfo(props) {
           props.setIsLegendary(species.is_legendary);
 
           species.flavor_text_entries.forEach(function (item) {
-
             if (item.language.name === "en") {
               let dupDexEntry = false;
               let entryText = item.flavor_text
@@ -58,8 +57,11 @@ export default function SpeciesInfo(props) {
 
     return (
         <div className="SpeciesInfo">
-          <h1>Pokedex Entries</h1>
-          <hr />
+          <div className="Title">
+            Pokedex Entries
+            <hr />
+          </div>
+          <div className="DexEntries">
               {speciesInfo.dexEntries.map((dexEntry, index) => 
                   <div key={index} className="DexEntry">
                     <div className="row">{dexEntry.versions.map((version) => 
@@ -76,6 +78,7 @@ export default function SpeciesInfo(props) {
                     <hr />
                   </div>
               )}
+            </div>
         </div>
     )
 }
