@@ -1,14 +1,13 @@
 const hyphenatedPokemon = ["jangmo-o", "kommo-o", "hakamo-o"];
 
-export const FormatPokemonName = (item) => {
-    if (!hyphenatedPokemon.includes(item.name)) {
-        item.name = item.name.replace(/-/g, ' ');
+export const FormatPokemonName = (name) => {
+    if (!hyphenatedPokemon.includes(name)) {
+        name = name.replace(/-/g, ' ');
     }
 
-    item.name = item.name[0].toUpperCase() + item.name.substring(1);
-    item.name = ApplyCamelCase(item.name);
-
-    return item;
+    name = name[0].toUpperCase() + name.substring(1);
+    name = ApplyCamelCase(name);
+    return name;
  };
 
 export const FormatTypeName = (item) => {

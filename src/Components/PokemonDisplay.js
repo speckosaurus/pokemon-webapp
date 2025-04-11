@@ -5,6 +5,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
 import { FormatTypeName, FormatPokemonName, GetDexNumberForDisplay } from '../Utils/Utils';
+import { playSound } from '../Functions/Functions';
 
 export default function PokemonDisplay(props) {
     const [pokemonDisplay, setPokemonDisplay] = useState([]);
@@ -24,22 +25,23 @@ export default function PokemonDisplay(props) {
         cancelToken: new axios.CancelToken(c => cancel = c)
       }).then(res => {
         let pokemon = res.data;
-        console.log(pokemon);
+        const name = FormatPokemonName(pokemon.name);
 
-        let pokemonDisplay = {
-            name: pokemon.name,
+        let types = [];
+        pokemon.types.forEach(function (item) {
+          let type = {name: item.type.name, url: item.type.url};
+          type = FormatTypeName(type);
+          types.push(type);
+        });
+
+        const pokemonDisplay = {
+            name: name,
             sprite: pokemon.sprites.front_default,
             shiny: pokemon.sprites.front_shiny,
-            types: []
+            types: types,
+            cry: pokemon.cries.latest,
+            legacyCry: pokemon.cries.legacy
         };
-
-        pokemon.name = FormatPokemonName(pokemonDisplay);
-
-        pokemon.types.forEach(function (item) {
-            let type = {name: item.type.name, url: item.type.url};
-            type = FormatTypeName(type);
-            pokemonDisplay.types.push(type);
-          });
 
         setPokemonDisplay(pokemonDisplay);
         props.setSpeciesUrl(pokemon.species.url);
@@ -48,6 +50,10 @@ export default function PokemonDisplay(props) {
   
       return () => cancel();
     }, [props.selectedPokemon]);
+
+    useEffect(() => {
+      playSound(pokemonDisplay.cry);
+    }, [pokemonDisplay])
 
     if (props.selectedPokemon == null) {
        return <div className="PokemonDisplay">
@@ -74,6 +80,10 @@ export default function PokemonDisplay(props) {
             <div className="row">{pokemonDisplay.types.map((type) => 
               <div className={type.name} key={type.name}>{type.name}</div>
             )}</div>
+            {/*<div className="row">
+              <AiFillSound onClick={playSound(pokemonDisplay.cry)} style={{ cursor: 'pointer' }} />
+              <AiFillSound onClick={playSound(pokemonDisplay.legacyCry)} style={{ cursor: 'pointer' }} hidden={!pokemonDisplay.legacyCry} />
+            </div>*/}
         </div>
     );
 }

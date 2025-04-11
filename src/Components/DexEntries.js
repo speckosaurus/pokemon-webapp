@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useState, useEffect, version } from 'react';
+import React, { useState, useEffect } from 'react';
 import './DexEntries.css';
 import './Games.css';
 import './Shared.css';

@@ -25,7 +25,7 @@ export default function PokemonList(props) {
         let newPokemon = res.data.results.map(p => p);
 
         newPokemon.forEach(function (item) {
-          item = FormatPokemonName(item);
+          item.name = FormatPokemonName(item.name);
         });
 
         setAllPokemon([...allPokemon, ...newPokemon]);
