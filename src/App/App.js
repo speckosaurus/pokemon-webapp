@@ -1,7 +1,7 @@
 import './App.css';
 import Navigation from '../Components/Navigation';
 import PokemonDisplay from '../Components/PokemonDisplay';
-import SpeciesInfo from '../Components/SpeciesInfo';
+import DexEntries from '../Components/DexEntries';
 import Header from '../Components/Header';
 
 import React, {useState} from 'react';
@@ -20,12 +20,13 @@ function App() {
         <Navigation setSelectedPokemon={setSelectedPokemon}/>
         <PokemonDisplay
           selectedPokemon={selectedPokemon}
+          speciesUrl={speciesUrl}
           setSpeciesUrl={setSpeciesUrl}
           isLegendary={isLegendary}
           isMythical={isMythical}
           isBaby={isBaby}
         />
-        <SpeciesInfo
+        <DexEntries
           speciesUrl={speciesUrl}
           setIsLegendary={setIsLegendary}
           setIsMythical={setIsMythical}

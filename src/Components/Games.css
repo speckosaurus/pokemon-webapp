@@ -1,0 +1,493 @@
+.red {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: red;
+  }
+  
+  .blue {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: blue;
+  }
+  
+  .green {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: lightgreen;
+  }
+  
+  .yellow {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+  }
+  
+  .firered {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: firebrick;
+  }
+  
+  .leafgreen {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: greenyellow;
+  }
+  
+  .gold {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: gold;
+  }
+  
+  .silver {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: silver;
+  }
+  
+  .crystal {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: lightblue;
+  }
+  
+  .heartgold {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: goldenrod;
+  }
+  
+  .soulsilver {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: lightgray;
+  }
+  
+  .ruby {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkred;
+  }
+  
+  .sapphire {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkblue;
+  }
+  
+  .emerald {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkgreen;
+  }
+  
+  .omega-ruby {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkred;
+  }
+  
+  .alpha-sapphire {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkblue;
+  }
+  
+  .diamond {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: lightsteelblue;
+  }
+  
+  .pearl {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: palevioletred;
+  }
+  
+  .platinum {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkslategray;
+  }
+  
+  .brilliant-diamond {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: lightsteelblue;
+  }
+  
+  .shining-pearl {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: palevioletred;
+  }
+  
+  .black {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }
+  
+  .white {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(0, 0, 0);
+    background-color: white;
+  }
+  
+  .black-2 {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: black;
+  }
+  
+  .white-2 {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(0, 0, 0);
+    background-color: white;
+  }
+  
+  .x {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: 25px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: blue;
+  }
+  
+  .y {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: 25px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: red;
+  }
+  
+  .sun {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkorange;
+  }
+  
+  .moon {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkslateblue;
+  }
+  
+  .ultra-sun {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkorange;
+  }
+  
+  .ultra-moon {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: darkslateblue;
+  }
+  
+  .lets-go-eevee {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: burlywood;
+  }
+  
+  .lets-go-pikachu {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(0, 0, 0);
+    background-color: yellow;
+  }
+  
+  .sword {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: cyan;
+  }
+  
+  .shield {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: magenta;
+  }
+  
+  .scarlet {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: #ff2400;
+  }
+  
+  .violet {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: #7f00ff;
+  }
+  
+  .legends-arceus {
+    border-radius: 5px;
+    float: left;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1px + 2vmin);
+    color: rgb(255, 255, 255);
+    background-color: #008080;
+  }

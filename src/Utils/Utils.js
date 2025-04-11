@@ -13,7 +13,6 @@ export const FormatPokemonName = (item) => {
 
 export const FormatTypeName = (item) => {
     item.name = CapitaliseFirstLetter(item.name);
-
     return item;
 }
 
@@ -60,4 +59,45 @@ export const FilterPokemonForms = (pokemonList) => {
         !p.name.includes('-totem') &&
         !p.name.includes('-crowned')
     );
+}
+
+export const GetDexNumber = (speciesUrl) => {
+  let url = speciesUrl.replace(/\/$/, "");
+  return /[^/]*$/.exec(url)[0];
+}
+
+export const GetDexNumberForDisplay = (speciesUrl) => {
+  const dexNumber = GetDexNumber(speciesUrl);
+  return String(dexNumber).padStart(3, '0');
+}
+
+export const ProcessDexEntries = (allDexEntries) => {
+  let dexEntries = {
+    dexEntries: []
+  };
+
+  allDexEntries.forEach(function (item) {
+    if (item.language.name === "en") {
+      let dupDexEntry = false;
+      let entryText = item.flavor_text
+        .replace('\f', ' ')
+        .replace(/\n/g,' ')
+        .replace('-', ' ');
+      let entryVersion = item.version.name;
+
+      dexEntries.dexEntries.forEach(function (dexEntry) {
+        if (dexEntry.text === entryText) {
+          dupDexEntry = true;
+          dexEntry.versions.push(entryVersion);
+        }
+      });
+      
+      if (!dupDexEntry) {
+        let entry = {text: entryText, versions: [entryVersion]};
+        dexEntries.dexEntries.push(entry);
+      }
+    }
+  });
+
+  return dexEntries;
 }

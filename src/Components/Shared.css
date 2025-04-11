@@ -14,3 +14,8 @@
   padding: 5px;
   width: 5px;
 }
+
+.icon {
+  height: 5vmin;
+  align-items: center;
+}

@@ -1,9 +1,10 @@
 import './PokemonDisplay.css';
+import './Types.css';
 import './Shared.css';
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Loading from './Loading';
-import { FormatTypeName, FormatPokemonName } from '../Utils/Utils';
+import { FormatTypeName, FormatPokemonName, GetDexNumberForDisplay } from '../Utils/Utils';
 
 export default function PokemonDisplay(props) {
     const [pokemonDisplay, setPokemonDisplay] = useState([]);
@@ -14,11 +15,16 @@ export default function PokemonDisplay(props) {
     useEffect(() => {
       setLoading(true);
       let cancel;
+
+      if (props.selectedPokemon === null) {
+        return;
+      }
       
       axios.get(props.selectedPokemon, {
         cancelToken: new axios.CancelToken(c => cancel = c)
       }).then(res => {
         let pokemon = res.data;
+        console.log(pokemon);
 
         let pokemonDisplay = {
             name: pokemon.name,
@@ -56,10 +62,10 @@ export default function PokemonDisplay(props) {
     return (
         <div className="PokemonDisplay">
             <div className="row">
-              <p className="row-item">{pokemonDisplay.name}</p>
-              <p className="row-item" hidden={!props.isBaby}> (baby)</p>
-              <p className="row-item" hidden={!props.isLegendary}> (legendary)</p>
-              <p className="row-item" hidden={!props.isMythical}> (mythical)</p>
+              <p className="row-item">{GetDexNumberForDisplay(props.speciesUrl)} - {pokemonDisplay.name}</p>
+              {/*<img src={baby} className="icon row-item" alt="baby" hidden={!props.isBaby}/>
+              <img className="icon row-item" alt="legendary" hidden={!props.isLegendary}/>
+              <img className="icon row-item" alt="mythical" hidden={!props.isMythical}/> */}
             </div>
             <div className="row">
                 <img src={pokemonDisplay.sprite} key="Pokemon-sprite" className="row-item" alt={pokemonDisplay.name + '-sprite'} />
